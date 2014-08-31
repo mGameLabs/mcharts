@@ -16,7 +16,7 @@ public class Test {
         testValues.add(9d);
         testValues.add(11d);
         testValues.add(5d);
-        testValues.add(16d);
+        testValues.add(0d);
         testValues.add(2d);
         testValues.add(9d);
         testValues.add(11d);
@@ -27,9 +27,9 @@ public class Test {
         colorPalette.add(new Color(242, 214, 162));
         colorPalette.add(new Color(242, 120, 109));
 
-        frame.add(new JRingChart(new Dimension(50, 50), testValues, 0.2, true));
+        frame.add(new JLineChart(new Dimension(500, 500), testValues, true, true));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(100, 100);
+        frame.setSize(500, 500);
         frame.setVisible(true);
     }
 

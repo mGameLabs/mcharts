@@ -2,7 +2,6 @@ package mCharts;
 
 import java.awt.*;
 import java.util.ArrayList;
-import static java.awt.RenderingHints.*;
 
 public class JPieChart extends JChart {
 
@@ -13,12 +12,6 @@ public class JPieChart extends JChart {
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
-        g2 = (Graphics2D) g.create();
-        g2.setRenderingHint(KEY_ANTIALIASING, VALUE_ANTIALIAS_ON);
-        g2.setRenderingHint(KEY_ALPHA_INTERPOLATION, VALUE_ALPHA_INTERPOLATION_QUALITY);
-        g2.setRenderingHint(KEY_COLOR_RENDERING, VALUE_COLOR_RENDER_QUALITY);
-        g2.setRenderingHint(KEY_RENDERING, VALUE_RENDER_QUALITY);
 
         double total = 0;
         for(int i = 0; i < values.size(); i++) { //Reference for absolute to relative conversion
